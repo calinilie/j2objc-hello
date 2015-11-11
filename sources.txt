@@ -2,4 +2,5 @@ src/main/java/com/mycompany/app/App.java
 src/main/java/com/mycompany/app/AppComponent.java
 src/main/java/com/mycompany/app/AppModule.java
 src/main/java/com/mycompany/app/Dependenci.java
+src/main/java/com/mycompany/app/DummyDto.java
 src/test/java/com/mycompany/app/AppTest.java

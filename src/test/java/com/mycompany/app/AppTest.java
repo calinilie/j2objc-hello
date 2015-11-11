@@ -29,4 +29,18 @@ public class AppTest {
 
 		Assert.assertEquals(actual, input + 12);
 	}
+	
+	@Test
+	public void testAppSerialization(){
+		AppComponent container = DaggerAppComponent.create();
+		App app = container.app();
+		
+		DummyDto actual = app.getDto();
+		DummyDto expected = new DummyDto(31, "Powell Porter", "Deserunt officia ut et do sit pariatur irure id sint adipisicing. Proident id et aliqua exercitation. Id amet elit nostrud consequat reprehenderit veniam aliquip id quis sint ex culpa mollit laboris.");
+		
+		Assert.assertEquals(expected.getId(), actual.getId());
+		Assert.assertEquals(expected.getName(), actual.getName());
+		Assert.assertEquals(expected.getMessage(), actual.getMessage());
+		
+	}
 }

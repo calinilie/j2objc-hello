@@ -19,4 +19,8 @@ public class App
     public String echo(String arg) {
     	return arg + this.dep.getDependenciValue();
     }
+    
+    public DummyDto getDto(){
+    	return this.dep.getDto();
+    }
 }
