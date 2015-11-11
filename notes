@@ -1,0 +1,29 @@
+1. translation
+
+j2objc \
+-d translate_output \
+--no-package-directories \
+--prefixes prefixes.properties \
+-use-arc \
+-classpath "./target/sources/junit-4.12.jar" \
+-sourcepath src/main/java \
+`find src -name '*.java'`
+
+2. compile
+
+j2objcc -c -I. `find . -name '*.m'`
+
+
+
+3. create runnable (for test purposes ??)
+j2objcc -ObjC -o mytest -ljunit `find . -name '*.m'`
+
+
+
+
+4. run da tests
+./mytest org.junit.runner.JUnitCore MCAAppTest 
+# where MCAAppTest is the test class to be run 
+
+
+
